@@ -29,6 +29,8 @@ class NativeSampleModule : public NativeSampleModuleCxxSpec<NativeSampleModule> 
   int32_t passLargeNumber(jsi::Runtime& rt, int64_t input);
 
   CustomType passCustomType(jsi::Runtime& rt, CustomType input);
+
+  int doFibExpensive(jsi::Runtime &rt, int n);
 };
 
 } // namespace facebook::react

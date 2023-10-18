@@ -21,4 +21,16 @@ CustomType NativeSampleModule::passCustomType(jsi::Runtime& rt, CustomType input
   return input;
 }
 
+int NativeSampleModule::doFibExpensive(jsi::Runtime &rt, int n)
+  {
+    if (n < 2)
+    {
+      return n;
+    }
+    else
+    {
+      return doFibExpensive(rt, n - 1) + doFibExpensive(rt, n - 2);
+    }
+  }
+
 } // namespace facebook::react
