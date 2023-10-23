@@ -9,6 +9,7 @@ export type CustomType = {
 }
 
 export interface Spec extends TurboModule {
+  readonly doFibExpensive:(n: number)=> number;
   readonly reverseString: (input: string) => string;
   readonly passLargeNumber: (input: string) => number;
   readonly passCustomType: (input: CustomType) => CustomType;
